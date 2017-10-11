@@ -1,3 +1,5 @@
+require 'pry'
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -40,6 +42,7 @@ class Replicator
   # and then manually execute each method to ensure
   # it returns what's expect.
   def replicate(recipe)
+    # binding.pry
 
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
@@ -88,6 +91,7 @@ class Replicator
 
   # This moves the glass from the cupboard to inside the replicator.
   def retrieve_glass
+    # binding.pry
     @enterprise.transporter.energize(
       @enterprise.cupboard.find_glass,
       @enterprise.cupboard.shelf,
